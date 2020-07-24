@@ -4,6 +4,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+export LANG=en_US.UTF-8
+
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
@@ -148,4 +150,5 @@ sshd_status=$(service ssh status)
 if [[ $sshd_status = *"is not running"* ]]; then
   sudo service ssh --full-restart
 fi
+
 export MANPATH=$HOME/man:$MANPATH

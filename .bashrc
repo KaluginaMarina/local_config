@@ -13,7 +13,7 @@ alias gp="git push"
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
-      *) return;;
+      *) exit;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -129,9 +129,9 @@ function _set_ps1() {
 	     
 	local c_reset="\[\e[m\]"
 		 
-	local c_magenta="\[\e[1;35;40m\]"
-	local c_red="\[\e[1;31;40m\]"
-	local c_cyan="\[\e[1;36;40m\]"
+	local c_magenta="\[\e[1;35m\]"
+	local c_red="\[\e[1;31m\]"
+	local c_cyan="\[\e[1;36m\]"
 			     
 	if [ $ret_code -ne 0 ]; then
 		local ps1_ret=" ${c_red}[\$?]${c_reset}"

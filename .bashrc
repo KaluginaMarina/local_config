@@ -152,3 +152,5 @@ if [[ $sshd_status = *"is not running"* ]]; then
 fi
 
 export MANPATH=$HOME/man:$MANPATH
+
+export LANGUAGE=en_US.UTF-8
